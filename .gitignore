@@ -1,0 +1,4 @@
+# Gallery build output and tooling (generated in CI, never committed)
+/dist/
+gallery/node_modules/
+gallery/package-lock.json

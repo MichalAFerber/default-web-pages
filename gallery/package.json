@@ -1,0 +1,14 @@
+{
+  "name": "default-web-pages-gallery",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Static gallery generator for the default-web-pages archive.",
+  "scripts": {
+    "build": "node ../gallery/build.mjs",
+    "shoot": "node shoot.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.49.1"
+  }
+}
