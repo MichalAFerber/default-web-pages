@@ -34,8 +34,8 @@ brand marks that remain trademarks of their owners no matter how the surrounding
 licensed:
 
 - **Microsoft Corporation** — the Windows flag, the IIS marks, the Microsoft / Microsoft
-  Web wordmarks, and the IIS Help text (`iis-*`, including the IIS Help `COLEGAL.HTM`, and
-  `iis-assets/`).
+  Web wordmarks, the IIS Help text, and the "ASP.NET" / ".NET" names (`iis-*`, including the
+  IIS Help `COLEGAL.HTM`, `iis-assets/`, and `aspnet-core/`).
 - **Canonical Ltd.** — the Ubuntu logo and name (`apache-ubuntu/`).
 - **Rocky Enterprise Software Foundation** — the Rocky Linux marks (`apache-rocky/`).
 - **Red Hat, Inc.** — Red Hat Enterprise Linux naming (`nginx-rhel/`).
@@ -59,6 +59,7 @@ licensed:
 - **LiteSpeed Technologies Inc.** — "OpenLiteSpeed" / "LiteSpeed" and their logos (`openlitespeed/`).
 - **Vercel, Inc.** — the "Next.js" name (`nextjs/`).
 - **Meta Platforms, Inc.** — the React name and logo (`create-react-app/`).
+- **The Astro Technology Company** — the "Astro" name and logo (`astro/`).
 
 These marks appear only as part of faithfully reproducing the original pages. Their
 inclusion is **nominative/archival use and does not imply any affiliation with,

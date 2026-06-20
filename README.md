@@ -82,6 +82,10 @@ Web-framework scaffolds - the page a new app shows before you've written any of 
 | `echo`        | Echo (Go)        | `{"message":"Not Found"}` |
 | `sinatra`     | Sinatra          | "Sinatra doesn't know this ditty." |
 | `create-react-app` | Create React App | "Edit src/App.js and save to reload." |
+| `go-nethttp`  | Go net/http      | "404 page not found" (with newline) |
+| `python-http-server` | Python http.server | "Error response" |
+| `astro`       | Astro            | "Welcome to Astro" |
+| `aspnet-core` | ASP.NET Core     | "Welcome" |
 
 ## Provenance
 

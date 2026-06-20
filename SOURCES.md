@@ -81,6 +81,10 @@ IIS 1.0–3.0 default pages are **not recoverable** and are documented, not ship
 | `echo/` | Echo default 404 JSON `{"message":"Not Found"}` | `labstack/echo` `echo.go` (`DefaultHTTPErrorHandler`) | MIT (LabStack & contributors) | Byte-exact body incl. the encoder's trailing newline |
 | `sinatra/` | Sinatra "doesn't know this ditty." built-in 404 page | `sinatra/sinatra` `lib/sinatra/base.rb` | MIT (Sinatra contributors) | Built-in template, de-indented; two `#{…}` interpolations left in |
 | `create-react-app/` | Create React App "Edit src/App.js and save to reload." starter | `facebook/create-react-app` `packages/cra-template/template/` | MIT (Meta); React name/logo trademarked | Byte-exact App.js / App.css / logo.svg / index.html |
+| `go-nethttp/` | Go `net/http` "404 page not found" stdlib 404 | `golang/go` `src/net/http/server.go` (`NotFound` / `Error`) | BSD-3-Clause (The Go Authors) | Byte-exact 19-byte body (incl. `Fprintln` newline) |
+| `python-http-server/` | Python `http.server` "Error response" page | `python/cpython` `Lib/http/server.py` (`DEFAULT_ERROR_MESSAGE`) | PSF License (Python Software Foundation) | Byte-exact template; `%(code)s` fields server-filled |
+| `astro/` | Astro "Welcome to Astro" starter (basics) | `withastro/astro` `examples/basics/src/` | MIT (Astro Technology Company); Astro logo trademarked | Byte-exact 5-file `src/` tree |
+| `aspnet-core/` | ASP.NET Core "Welcome" Razor Pages home | `dotnet/aspnetcore` `…/RazorPagesWeb-CSharp/Pages/Index.cshtml` | MIT (.NET Foundation); "ASP.NET" / ".NET" trademarked | Byte-exact template (UTF-8 BOM + `dotnet new` `#if` block) |
 
 ## First-party pages — © Michal Ferber (covered by this repo's [`LICENSE`](LICENSE))
 
