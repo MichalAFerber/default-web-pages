@@ -52,6 +52,15 @@ IIS 1.0–3.0 default pages are **not recoverable** and are documented, not ship
 | `squid/` | Squid proxy error page ("ERROR: The requested URL could not be retrieved"), the `ERR_ACCESS_DENIED` template | `squid-cache/squid` `errors/templates/ERR_ACCESS_DENIED` | GPL-2.0-or-later (Squid Software Foundation & contributors) | Byte-exact template; `%` tokens are server-filled |
 | `nginx-ingress/` | Kubernetes ingress-nginx "default backend - 404" (plain-text 404 body) + its Go source | `kubernetes/ingress-gce` `cmd/404-server/server.go` | Apache-2.0 (The Kubernetes Authors) | Byte-exact 21-byte body + genuine `server.go` |
 
+## API gateways & edge proxies
+
+| Path | What it is | Origin | License / rights | Fidelity |
+|------|------------|--------|------------------|----------|
+| `envoy/` | Envoy "no healthy upstream" 503 body (response flag `UH`) | `envoyproxy/envoy` `source/common/router/router.cc` | Apache-2.0 (Envoy Project Authors); "Envoy" a CNCF trademark | Byte-exact body (19 B, no newline) |
+| `traefik/` | Traefik "404 page not found" for unmatched routes (Go `net/http` default) | `golang/go` `src/net/http/server.go` (`http.NotFound`) | BSD-3-Clause (The Go Authors); "Traefik" a Traefik Labs trademark | Byte-exact body (`404 page not found\n`) |
+| `kong/` | Kong Gateway default 404 "no Route matched with those values" | `Kong/kong` `kong/runloop/handler.lua` | Apache-2.0 (Kong Inc.); "Kong" trademarked | Message byte-exact from source; JSON envelope reconstructed |
+| `apisix/` | Apache APISIX default 404 "404 Route Not Found" | `apache/apisix` `apisix/init.lua` | Apache-2.0 (ASF); "Apache APISIX" trademarked | Message byte-exact from source; JSON envelope reconstructed |
+
 ## Web frameworks
 
 | Path | What it is | Origin | License / rights | Fidelity |

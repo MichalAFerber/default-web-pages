@@ -55,6 +55,10 @@ Reverse proxies, caches, and application servers - their default landing and err
 | `haproxy`       | HAProxy                 | "503 Service Unavailable" |
 | `squid`         | Squid                   | "ERROR: The requested URL could not be retrieved" |
 | `nginx-ingress` | Kubernetes ingress-nginx | "default backend - 404" |
+| `envoy`         | Envoy                    | "no healthy upstream" |
+| `traefik`       | Traefik (Go net/http)    | "404 page not found" |
+| `kong`          | Kong Gateway             | "no Route matched with those values" |
+| `apisix`        | Apache APISIX            | "404 Route Not Found" |
 
 ## frameworks
 

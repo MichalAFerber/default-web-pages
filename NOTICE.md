@@ -41,7 +41,7 @@ licensed:
 - **Red Hat, Inc.** — Red Hat Enterprise Linux naming (`nginx-rhel/`).
 - **F5, Inc.** — the nginx name and logo (`nginx/`, `nginx-rhel/`).
 - **The Apache Software Foundation** — the Apache feather and name, including **Apache
-  Tomcat** (`apache-*`, `tomcat/`).
+  Tomcat** and **Apache APISIX** (`apache-*`, `tomcat/`, `apisix/`).
 - **The Caddy project / Stack Holdings GmbH** — the Caddy name and logo (`caddy/`).
 - **Varnish Software AS** — the "Varnish" name (`varnish/`).
 - **HAProxy Technologies, LLC** — the "HAProxy" name (`haproxy/`).
@@ -52,6 +52,9 @@ licensed:
 - **The Pallets organization** — the "Flask" name (`flask/`).
 - **Broadcom Inc.** — "Spring" and "Spring Boot" (`spring-boot/`).
 - **Taylor Otwell** — the "Laravel" name and logo (`laravel/`).
+- **Traefik Labs** — the "Traefik" name and logo (`traefik/`).
+- **The Cloud Native Computing Foundation** — the "Envoy" name (`envoy/`).
+- **Kong Inc.** — the "Kong" name (`kong/`).
 
 These marks appear only as part of faithfully reproducing the original pages. Their
 inclusion is **nominative/archival use and does not imply any affiliation with,
