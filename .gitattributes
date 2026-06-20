@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Raw HTTP response files (e.g. HAProxy errorfiles) are served verbatim and must
+# keep their CRLF line endings, so exempt them from normalization.
+*.http -text
