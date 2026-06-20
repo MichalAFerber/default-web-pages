@@ -27,6 +27,11 @@ can't read the metabase.
 - `localstart.asp`  - local-only welcome page, the genuine ASP source
 - `LOCALSTART.HTM`  - the same page as a live IIS 5.1 box actually rendered it (opens standalone)
 - `WINXP.GIF`, `WARNING.GIF`, `WEB.GIF`, `MMC.GIF`, `HELP.GIF`, `PRINT.GIF` - the genuine page artwork
+- `IISHELP/COMMON/COLEGAL.HTM` - the IIS Help "Legal Information" page that `localstart`
+  links to (the © 1997-2001 Microsoft notice at the foot of the welcome page points here).
+  Genuine HTTrack capture from the same 2024-06-22 mirror, cleaned of the mirror comments
+  and a stray `protonpass-root` browser-extension artifact; styled by the sibling
+  `COUA.CSS` (the non-IE4 `COCSS.CSS` its script also references wasn't recovered)
 
 ## Provenance - now fully genuine
 
