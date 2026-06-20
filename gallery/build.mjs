@@ -117,11 +117,22 @@ function bodyCard(name, file, text) {
 <pre class="resp">${esc(text)}</pre></div></body></html>`;
 }
 
+const LANG = {
+  '.php': 'php', '.vue': 'xml', '.tsx': 'typescript', '.ts': 'typescript', '.astro': 'xml',
+  '.cshtml': 'xml', '.heex': 'elixir', '.erb': 'erb', '.jsp': 'xml', '.asp': 'xml',
+  '.js': 'javascript', '.css': 'css', '.json': 'json', '.html': 'xml', '.htm': 'xml',
+};
+
 function sourceCard(name, file, text) {
+  const lang = LANG[path.extname(file).toLowerCase()];
+  const cls = lang ? ` class="language-${lang}"` : '';
   return `<!doctype html><html lang="en"><head><meta charset="utf-8">
-<title>${esc(name)}</title><link rel="stylesheet" href="../../card.css"></head>
+<title>${esc(name)}</title>
+<link rel="stylesheet" href="../../vendor/github-dark.min.css">
+<link rel="stylesheet" href="../../card.css"></head>
 <body class="card source"><div class="frame"><div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="fn">${esc(file)}</span></div>
-<pre class="code">${esc(text)}</pre></div></body></html>`;
+<pre class="code"><code${cls}>${esc(text)}</code></pre>
+<script src="../../vendor/highlight.min.js"></script><script>hljs.highlightAll();</script></div></body></html>`;
 }
 
 function build() {
@@ -250,6 +261,7 @@ q.addEventListener('input',flt);
 
   fs.copyFileSync(path.join(ROOT, 'gallery', 'assets', 'styles.css'), path.join(OUT, 'styles.css'));
   fs.copyFileSync(path.join(ROOT, 'gallery', 'assets', 'card.css'), path.join(OUT, 'card.css'));
+  fs.cpSync(path.join(ROOT, 'gallery', 'assets', 'vendor'), path.join(OUT, 'vendor'), { recursive: true });
   fs.writeFileSync(path.join(OUT, '.nojekyll'), '');
   fs.writeFileSync(path.join(OUT, 'shots.json'),
     JSON.stringify(entries.map((e) => e.name), null, 0));

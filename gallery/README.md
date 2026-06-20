@@ -31,3 +31,9 @@ the `SOURCES.md` table, so the gallery stays in sync with the archive.
 
 In the repo settings, set **Settings → Pages → Build and deployment → Source = GitHub
 Actions**. The workflow handles the rest.
+
+## Third-party
+
+Source/template previews are syntax-highlighted with [highlight.js](https://highlightjs.org/)
+(v11.9.0, BSD-3-Clause) using its `github-dark` theme, vendored under `assets/vendor/` so the
+screenshots stay hermetic (no CDN at render time).

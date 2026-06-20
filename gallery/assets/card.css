@@ -16,3 +16,6 @@ pre { margin: 0; padding: 18px 20px; overflow: auto; font-size: 13.5px; line-hei
   white-space: pre-wrap; word-break: break-word; background: #202327; }
 .resp { color: #cdd2d8; }
 .code { color: #c8ccd1; }
+/* let highlight.js color the tokens, but keep the card's charcoal background */
+pre.code code { font: inherit; }
+pre.code .hljs, pre.code code.hljs { background: transparent; padding: 0; color: #c8ccd1; }
