@@ -91,6 +91,9 @@ Web-framework scaffolds - the page a new app shows before you've written any of 
 | `koa`         | Koa              | "Not Found" |
 | `rocket`      | Rocket (Rust)    | "404: Not Found" |
 | `codeigniter` | CodeIgniter      | "Welcome to CodeIgniter 4!" |
+| `cakephp`     | CakePHP          | "Welcome to CakePHP" |
+| `slim`        | Slim             | "404 Not Found" |
+| `spark`       | Spark (Java)     | "404 Not found" |
 
 ## Provenance
 

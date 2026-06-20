@@ -90,6 +90,9 @@ IIS 1.0–3.0 default pages are **not recoverable** and are documented, not ship
 | `koa/` | Koa default "Not Found" plain-text 404 | `koajs/koa` `lib/application.js` (`respond`) | MIT (Koa contributors) | Byte-exact 9-byte body |
 | `rocket/` | Rocket built-in "404: Not Found" HTML page | `rwf2/Rocket` `core/lib/src/catcher/catcher.rs` (`html_error_template!`) | MIT / Apache-2.0 (Rocket contributors) | Byte-exact rendered 404 (no trailing newline) |
 | `codeigniter/` | CodeIgniter "Welcome to CodeIgniter 4!" page | `codeigniter4/CodeIgniter4` `app/Views/welcome_message.php` | MIT (CodeIgniter Foundation); CodeIgniter mark | Byte-exact view (`{csp-style-nonce}` + perf `<?=` server-filled) |
+| `cakephp/` | CakePHP "Welcome to CakePHP" default home page | `cakephp/app` `templates/Pages/home.php` | MIT (Cake Software Foundation); CakePHP mark | Byte-exact PHP view (runs live env checks) |
+| `slim/` | Slim default 404 ("404 Not Found") page | `slimphp/Slim` `Slim/Error/Renderers/HtmlErrorRenderer.php` (+ `HttpNotFoundException`) | MIT (Slim Framework team) | Byte-exact rendered 404 (single line, no newline) |
+| `spark/` | Spark (Java) default "404 Not found" body | `perwendel/spark` `CustomErrorPages.NOT_FOUND` | Apache-2.0 (Per Wendel & contributors) | Byte-exact 48-byte body |
 
 ## First-party pages — © Michal Ferber (covered by this repo's [`LICENSE`](LICENSE))
 

@@ -62,6 +62,7 @@ licensed:
 - **The Astro Technology Company** — the "Astro" name and logo (`astro/`).
 - **The Vue.js project (Evan You)** — the Vue name and logo (`vue/`).
 - **The CodeIgniter Foundation** — the "CodeIgniter" name and logo (`codeigniter/`).
+- **The Cake Software Foundation** — the "CakePHP" name and logo (`cakephp/`).
 
 These marks appear only as part of faithfully reproducing the original pages. Their
 inclusion is **nominative/archival use and does not imply any affiliation with,
