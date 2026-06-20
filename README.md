@@ -86,6 +86,7 @@ Web-framework scaffolds - the page a new app shows before you've written any of 
 | `python-http-server` | Python http.server | "Error response" |
 | `astro`       | Astro            | "Welcome to Astro" |
 | `aspnet-core` | ASP.NET Core     | "Welcome" |
+| `vue`         | Vue              | "You did it!" |
 
 ## Provenance
 

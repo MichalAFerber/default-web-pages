@@ -85,6 +85,7 @@ IIS 1.0–3.0 default pages are **not recoverable** and are documented, not ship
 | `python-http-server/` | Python `http.server` "Error response" page | `python/cpython` `Lib/http/server.py` (`DEFAULT_ERROR_MESSAGE`) | PSF License (Python Software Foundation) | Byte-exact template; `%(code)s` fields server-filled |
 | `astro/` | Astro "Welcome to Astro" starter (basics) | `withastro/astro` `examples/basics/src/` | MIT (Astro Technology Company); Astro logo trademarked | Byte-exact 5-file `src/` tree |
 | `aspnet-core/` | ASP.NET Core "Welcome" Razor Pages home | `dotnet/aspnetcore` `…/RazorPagesWeb-CSharp/Pages/Index.cshtml` | MIT (.NET Foundation); "ASP.NET" / ".NET" trademarked | Byte-exact template (UTF-8 BOM + `dotnet new` `#if` block) |
+| `vue/` | Vue "You did it!" welcome (create-vue default) | `vuejs/create-vue` `template/` (`base/` + `code/default/` + `entry/default/`) | MIT (Evan You & contributors); Vue logo trademarked | Byte-exact 13-file `src/` scaffold |
 
 ## First-party pages — © Michal Ferber (covered by this repo's [`LICENSE`](LICENSE))
 
