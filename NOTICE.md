@@ -58,6 +58,7 @@ licensed:
 - **Kong Inc.** — the "Kong" name (`kong/`).
 - **LiteSpeed Technologies Inc.** — "OpenLiteSpeed" / "LiteSpeed" and their logos (`openlitespeed/`).
 - **Vercel, Inc.** — the "Next.js" name (`nextjs/`).
+- **Meta Platforms, Inc.** — the React name and logo (`create-react-app/`).
 
 These marks appear only as part of faithfully reproducing the original pages. Their
 inclusion is **nominative/archival use and does not imply any affiliation with,

@@ -77,6 +77,10 @@ IIS 1.0–3.0 default pages are **not recoverable** and are documented, not ship
 | `fastapi/` | FastAPI default 404 body `{"detail":"Not Found"}` | `fastapi/fastapi` `fastapi/exception_handlers.py` (+ Starlette "Not Found") | MIT (Sebastián Ramírez & contributors) | Byte-exact 22-byte JSONResponse body |
 | `nextjs/` | Next.js "404 - This page could not be found" error page | `vercel/next.js` `packages/next/src/pages/_error.tsx` | MIT (Vercel); "Next.js" trademarked | Byte-exact component source (page is React-rendered) |
 | `phoenix/` | Phoenix "Peace of mind from prototype to production" home page | `phoenixframework/phoenix` (v1.7.14) `installer/templates/phx_web/controllers/page_html/home.html.heex` | MIT (Chris McCord & contributors) | Byte-exact HEEx template |
+| `gin/` | Gin "404 page not found" plain-text 404 | `gin-gonic/gin` `gin.go` (`default404Body` / `serveError`) | MIT (Gin-Gonic & contributors) | Byte-exact 18-byte body |
+| `echo/` | Echo default 404 JSON `{"message":"Not Found"}` | `labstack/echo` `echo.go` (`DefaultHTTPErrorHandler`) | MIT (LabStack & contributors) | Byte-exact body incl. the encoder's trailing newline |
+| `sinatra/` | Sinatra "doesn't know this ditty." built-in 404 page | `sinatra/sinatra` `lib/sinatra/base.rb` | MIT (Sinatra contributors) | Built-in template, de-indented; two `#{…}` interpolations left in |
+| `create-react-app/` | Create React App "Edit src/App.js and save to reload." starter | `facebook/create-react-app` `packages/cra-template/template/` | MIT (Meta); React name/logo trademarked | Byte-exact App.js / App.css / logo.svg / index.html |
 
 ## First-party pages — © Michal Ferber (covered by this repo's [`LICENSE`](LICENSE))
 

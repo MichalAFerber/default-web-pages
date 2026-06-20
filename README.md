@@ -78,6 +78,10 @@ Web-framework scaffolds - the page a new app shows before you've written any of 
 | `fastapi`     | FastAPI          | `{"detail":"Not Found"}` |
 | `nextjs`      | Next.js          | "404 \| This page could not be found" |
 | `phoenix`     | Phoenix          | "Peace of mind from prototype to production" |
+| `gin`         | Gin (Go)         | "404 page not found" |
+| `echo`        | Echo (Go)        | `{"message":"Not Found"}` |
+| `sinatra`     | Sinatra          | "Sinatra doesn't know this ditty." |
+| `create-react-app` | Create React App | "Edit src/App.js and save to reload." |
 
 ## Provenance
 
