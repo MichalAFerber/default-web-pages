@@ -1,0 +1,43 @@
+name: Validate gallery
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate gallery
+        run: node gallery/build.mjs
+
+      - name: Install Playwright + Chromium
+        working-directory: gallery
+        run: |
+          npm install
+          npx playwright install --with-deps chromium
+
+      - name: Screenshot entries
+        working-directory: gallery
+        run: node shoot.mjs
+
+      - name: Sanity-check output
+        run: |
+          test -f dist/index.html
+          n=$(ls dist/shots | wc -l)
+          echo "screenshots produced: $n"
+          test "$n" -gt 40
