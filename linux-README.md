@@ -87,8 +87,9 @@ from `/usr/share/caddy`. Source: `caddyserver/dist` -> `welcome/index.html`.
 ## Not included (honorable mentions)
 
 - **lighttpd** - "powered by lighttpd" placeholder page.
-- **Apache Tomcat** - the Tomcat-branded "It works!" landing page with the cat/feather
-  logo at `/` (different lineage from Apache HTTP Server entirely).
+- **Apache Tomcat** - now included in `tomcat/` (the ROOT welcome dashboard, a different
+  lineage from Apache HTTP Server entirely). Other proxies/app servers live alongside it:
+  `varnish/`, `haproxy/`, `squid/`, `nginx-ingress/`.
 - **OpenLiteSpeed / LiteSpeed** - their own welcome/landing page.
 
 Say the word and I'll chase any of these down to byte-exact and fold them in.

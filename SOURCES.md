@@ -42,6 +42,16 @@ IIS 1.0–3.0 default pages are **not recoverable** and are documented, not ship
 | `apache-rocky/` | Apache (Rocky / EL9 pkg) | `index.html`, `poweredby.png` | `/usr/share/httpd/noindex/` (via `welcome.conf`) | Pulled off a live Rocky EL9 box; artwork from the `rocky-logos-httpd` package | Byte-exact | Code Apache-2.0; Rocky marks © RESF |
 | `caddy/` | Caddy v2 | `index.html`, `50x.html` | `/usr/share/caddy/` | `caddyserver/dist` → `welcome/index.html` plus the default `50x` error page | Byte-exact except the inline logo `<svg>` path data, which is stubbed | Apache-2.0; "Caddy" name/logo trademarked |
 
+## Reverse proxies, caches & app servers
+
+| Path | What it is | Origin | License / rights | Fidelity |
+|------|------------|--------|------------------|----------|
+| `tomcat/` | Apache Tomcat default ROOT welcome page ("…successfully installed Tomcat. Congratulations!") + CSS, logo, favicon, backgrounds | `apache/tomcat` `webapps/ROOT/` (`main`) | Apache-2.0 (ASF); "Tomcat" / feather marks trademarked | Byte-exact; `index.jsp` is genuine JSP source (title resolves at runtime, `@…@` tokens filled by the build) |
+| `varnish/` | Varnish "Guru Meditation" 503 error page | `varnishcache/varnish-cache` `bin/varnishd/builtin.vcl` (`vcl_builtin_backend_error`) | BSD-2-Clause (Verdens Gang AS / Varnish Software AS); "Varnish" trademarked | `index.html` rendered from the official VCL template — only status/reason/XID vary |
+| `haproxy/` | HAProxy "503 Service Unavailable / No server is available…" page | `haproxy/haproxy` `examples/errorfiles/503.http` | GPL-2.0-or-later (Willy Tarreau & contributors) | Byte-exact raw HTTP response, **CRLF preserved** (see `.gitattributes`) |
+| `squid/` | Squid proxy error page ("ERROR: The requested URL could not be retrieved"), the `ERR_ACCESS_DENIED` template | `squid-cache/squid` `errors/templates/ERR_ACCESS_DENIED` | GPL-2.0-or-later (Squid Software Foundation & contributors) | Byte-exact template; `%` tokens are server-filled |
+| `nginx-ingress/` | Kubernetes ingress-nginx "default backend - 404" (plain-text 404 body) + its Go source | `kubernetes/ingress-gce` `cmd/404-server/server.go` | Apache-2.0 (The Kubernetes Authors) | Byte-exact 21-byte body + genuine `server.go` |
+
 ## First-party pages — © Michal Ferber (covered by this repo's [`LICENSE`](LICENSE))
 
 | Path | What it is | Files | Notes |

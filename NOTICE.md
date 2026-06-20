@@ -40,8 +40,13 @@ licensed:
 - **Rocky Enterprise Software Foundation** — the Rocky Linux marks (`apache-rocky/`).
 - **Red Hat, Inc.** — Red Hat Enterprise Linux naming (`nginx-rhel/`).
 - **F5, Inc.** — the nginx name and logo (`nginx/`, `nginx-rhel/`).
-- **The Apache Software Foundation** — the Apache feather and name (`apache-*`).
+- **The Apache Software Foundation** — the Apache feather and name, including **Apache
+  Tomcat** (`apache-*`, `tomcat/`).
 - **The Caddy project / Stack Holdings GmbH** — the Caddy name and logo (`caddy/`).
+- **Varnish Software AS** — the "Varnish" name (`varnish/`).
+- **HAProxy Technologies, LLC** — the "HAProxy" name (`haproxy/`).
+- **The Squid Software Foundation** — the "Squid" name (`squid/`).
+- **The Linux Foundation** — the "Kubernetes" name (`nginx-ingress/`).
 
 These marks appear only as part of faithfully reproducing the original pages. Their
 inclusion is **nominative/archival use and does not imply any affiliation with,

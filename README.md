@@ -44,6 +44,18 @@ There is **no IIS 9** - Microsoft jumped 8.5 to 10 to line up with Windows 10.
 On Linux the "default page" is **distro packaging**, not the upstream project, which is
 why nginx and Apache each appear twice (plain upstream vs. the RHEL-family test page).
 
+## servers & proxies
+
+Reverse proxies, caches, and application servers - their default landing and error pages.
+
+| Folder | Project | The page |
+|--------|---------|----------|
+| `tomcat`        | Apache Tomcat            | "…successfully installed Tomcat. Congratulations!" ROOT page |
+| `varnish`       | Varnish Cache           | the "Guru Meditation" 503 |
+| `haproxy`       | HAProxy                 | "503 Service Unavailable" |
+| `squid`         | Squid                   | "ERROR: The requested URL could not be retrieved" |
+| `nginx-ingress` | Kubernetes ingress-nginx | "default backend - 404" |
+
 ## Provenance
 
 Almost everything here is **byte-exact**, pulled from a genuine source - a live server
