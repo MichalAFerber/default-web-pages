@@ -56,6 +56,18 @@ Reverse proxies, caches, and application servers - their default landing and err
 | `squid`         | Squid                   | "ERROR: The requested URL could not be retrieved" |
 | `nginx-ingress` | Kubernetes ingress-nginx | "default backend - 404" |
 
+## frameworks
+
+Web-framework scaffolds - the page a new app shows before you've written any of your own.
+
+| Folder | Framework | The page |
+|--------|-----------|----------|
+| `django`      | Django           | "The install worked successfully! Congratulations!" (the rocket) |
+| `rails`       | Ruby on Rails    | "Yay! You're on Rails!" |
+| `flask`       | Flask / Werkzeug | "404 Not Found" |
+| `spring-boot` | Spring Boot      | "Whitelabel Error Page" |
+| `laravel`     | Laravel          | the default Tailwind welcome page |
+
 ## Provenance
 
 Almost everything here is **byte-exact**, pulled from a genuine source - a live server

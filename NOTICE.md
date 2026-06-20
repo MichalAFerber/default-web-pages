@@ -47,6 +47,11 @@ licensed:
 - **HAProxy Technologies, LLC** — the "HAProxy" name (`haproxy/`).
 - **The Squid Software Foundation** — the "Squid" name (`squid/`).
 - **The Linux Foundation** — the "Kubernetes" name (`nginx-ingress/`).
+- **The Django Software Foundation** — the "Django" name and logo (`django/`).
+- **David Heinemeier Hansson** — "Ruby on Rails" and the Rails logo (`rails/`).
+- **The Pallets organization** — the "Flask" name (`flask/`).
+- **Broadcom Inc.** — "Spring" and "Spring Boot" (`spring-boot/`).
+- **Taylor Otwell** — the "Laravel" name and logo (`laravel/`).
 
 These marks appear only as part of faithfully reproducing the original pages. Their
 inclusion is **nominative/archival use and does not imply any affiliation with,

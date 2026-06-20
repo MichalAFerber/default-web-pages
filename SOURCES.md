@@ -52,6 +52,16 @@ IIS 1.0–3.0 default pages are **not recoverable** and are documented, not ship
 | `squid/` | Squid proxy error page ("ERROR: The requested URL could not be retrieved"), the `ERR_ACCESS_DENIED` template | `squid-cache/squid` `errors/templates/ERR_ACCESS_DENIED` | GPL-2.0-or-later (Squid Software Foundation & contributors) | Byte-exact template; `%` tokens are server-filled |
 | `nginx-ingress/` | Kubernetes ingress-nginx "default backend - 404" (plain-text 404 body) + its Go source | `kubernetes/ingress-gce` `cmd/404-server/server.go` | Apache-2.0 (The Kubernetes Authors) | Byte-exact 21-byte body + genuine `server.go` |
 
+## Web frameworks
+
+| Path | What it is | Origin | License / rights | Fidelity |
+|------|------------|--------|------------------|----------|
+| `django/` | Django "The install worked successfully! Congratulations!" rocket landing page (DEBUG, no URLs) | `django/django` `django/views/templates/default_urlconf.html` | BSD-3-Clause (Django Software Foundation); Django name/logo trademarked | Byte-exact template (inline SVG + `{% translate %}` tags) |
+| `rails/` | Rails "Yay! You're on Rails!" welcome page | `rails/rails` `railties/lib/rails/templates/rails/welcome/index.html.erb` | MIT (DHH & Rails contributors); "Ruby on Rails" / logo trademarked | Byte-exact ERB template |
+| `flask/` | Flask / Werkzeug "404 Not Found" page | `pallets/werkzeug` `src/werkzeug/exceptions.py` (`HTTPException.get_body` + `NotFound`) | BSD-3-Clause (Pallets); "Flask" trademarked | Rendered from the official generator — byte-for-byte what Werkzeug emits |
+| `spring-boot/` | Spring Boot "Whitelabel Error Page" | `spring-projects/spring-boot` `…/error/ErrorMvcAutoConfiguration.java` (v3.5.0) | Apache-2.0 (Broadcom / Spring); "Spring" / "Spring Boot" trademarked | Rendered from the `StaticView` builder (404; example timestamp) |
+| `laravel/` | Laravel default welcome page | `laravel/laravel` `resources/views/welcome.blade.php` | MIT (Taylor Otwell & contributors); "Laravel" / logo trademarked | Byte-exact Blade/Tailwind template |
+
 ## First-party pages — © Michal Ferber (covered by this repo's [`LICENSE`](LICENSE))
 
 | Path | What it is | Files | Notes |
