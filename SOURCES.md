@@ -86,6 +86,10 @@ IIS 1.0–3.0 default pages are **not recoverable** and are documented, not ship
 | `astro/` | Astro "Welcome to Astro" starter (basics) | `withastro/astro` `examples/basics/src/` | MIT (Astro Technology Company); Astro logo trademarked | Byte-exact 5-file `src/` tree |
 | `aspnet-core/` | ASP.NET Core "Welcome" Razor Pages home | `dotnet/aspnetcore` `…/RazorPagesWeb-CSharp/Pages/Index.cshtml` | MIT (.NET Foundation); "ASP.NET" / ".NET" trademarked | Byte-exact template (UTF-8 BOM + `dotnet new` `#if` block) |
 | `vue/` | Vue "You did it!" welcome (create-vue default) | `vuejs/create-vue` `template/` (`base/` + `code/default/` + `entry/default/`) | MIT (Evan You & contributors); Vue logo trademarked | Byte-exact 13-file `src/` scaffold |
+| `hono/` | Hono "404 Not Found" plain-text 404 | `honojs/hono` `src/hono-base.ts` (`notFoundHandler`) | MIT (Yusuke Wada & contributors) | Byte-exact 13-byte body |
+| `koa/` | Koa default "Not Found" plain-text 404 | `koajs/koa` `lib/application.js` (`respond`) | MIT (Koa contributors) | Byte-exact 9-byte body |
+| `rocket/` | Rocket built-in "404: Not Found" HTML page | `rwf2/Rocket` `core/lib/src/catcher/catcher.rs` (`html_error_template!`) | MIT / Apache-2.0 (Rocket contributors) | Byte-exact rendered 404 (no trailing newline) |
+| `codeigniter/` | CodeIgniter "Welcome to CodeIgniter 4!" page | `codeigniter4/CodeIgniter4` `app/Views/welcome_message.php` | MIT (CodeIgniter Foundation); CodeIgniter mark | Byte-exact view (`{csp-style-nonce}` + perf `<?=` server-filled) |
 
 ## First-party pages — © Michal Ferber (covered by this repo's [`LICENSE`](LICENSE))
 

@@ -87,6 +87,10 @@ Web-framework scaffolds - the page a new app shows before you've written any of 
 | `astro`       | Astro            | "Welcome to Astro" |
 | `aspnet-core` | ASP.NET Core     | "Welcome" |
 | `vue`         | Vue              | "You did it!" |
+| `hono`        | Hono             | "404 Not Found" |
+| `koa`         | Koa              | "Not Found" |
+| `rocket`      | Rocket (Rust)    | "404: Not Found" |
+| `codeigniter` | CodeIgniter      | "Welcome to CodeIgniter 4!" |
 
 ## Provenance
 
