@@ -72,3 +72,25 @@ re-inserted. Details in `iis/iis-5.x_win2000-xp/README.md`.
 - **Empty dirs:** there are none. If you ever `mkdir {a,b,c}` in a shell that doesn't do
   brace expansion (POSIX `sh`/dash) you'll create one literal `{a,b,c}` folder; clean any
   up with `find . -depth -type d -name '{*}' -empty -delete`.
+
+## Related projects
+
+Other repositories that recreate or serve default / decoy web-server pages:
+
+- **[`fake-iis`](https://github.com/aayusharyan/fake-iis)** (`main`) — by Aayush Sinha. A
+  Dockerized decoy (OpenResty/nginx) that serves a pixel-perfect fake Microsoft IIS 8.0
+  site: spoofed `Server` / `X-Powered-By` headers and IIS-styled 403 / 404 / 500 pages.
+  MIT-licensed; prebuilt image at `ghcr.io/aayusharyan/fake-iis`.
+
+## License
+
+The collected pages here each remain **© their respective owners** and are included for
+archival, educational, and identification purposes. The repository's own original work —
+its structure, the README / `NOTICE` / `SOURCES` docs, any scripts, and the first-party
+pages (`ari-integration.com/`, `site-maintenance/`) — is released under the
+[MIT License](LICENSE).
+
+- [`NOTICE.md`](NOTICE.md) — what the license does and doesn't cover, plus the trademark,
+  logo, and government-seal caveats (the parts that are easy to forget).
+- [`SOURCES.md`](SOURCES.md) — per-item origin map (live host / repo / package) and how
+  faithful each copy is.
