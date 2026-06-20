@@ -74,6 +74,10 @@ Web-framework scaffolds - the page a new app shows before you've written any of 
 | `flask`       | Flask / Werkzeug | "404 Not Found" |
 | `spring-boot` | Spring Boot      | "Whitelabel Error Page" |
 | `laravel`     | Laravel          | the default Tailwind welcome page |
+| `express`     | Express          | "Cannot GET /" |
+| `fastapi`     | FastAPI          | `{"detail":"Not Found"}` |
+| `nextjs`      | Next.js          | "404 \| This page could not be found" |
+| `phoenix`     | Phoenix          | "Peace of mind from prototype to production" |
 
 ## Provenance
 

@@ -73,6 +73,10 @@ IIS 1.0–3.0 default pages are **not recoverable** and are documented, not ship
 | `flask/` | Flask / Werkzeug "404 Not Found" page | `pallets/werkzeug` `src/werkzeug/exceptions.py` (`HTTPException.get_body` + `NotFound`) | BSD-3-Clause (Pallets); "Flask" trademarked | Rendered from the official generator — byte-for-byte what Werkzeug emits |
 | `spring-boot/` | Spring Boot "Whitelabel Error Page" | `spring-projects/spring-boot` `…/error/ErrorMvcAutoConfiguration.java` (v3.5.0) | Apache-2.0 (Broadcom / Spring); "Spring" / "Spring Boot" trademarked | Rendered from the `StaticView` builder (404; example timestamp) |
 | `laravel/` | Laravel default welcome page | `laravel/laravel` `resources/views/welcome.blade.php` | MIT (Taylor Otwell & contributors); "Laravel" / logo trademarked | Byte-exact Blade/Tailwind template |
+| `express/` | Express "Cannot GET /" unmatched-route 404 | `pillarjs/finalhandler` `index.js` (`createHtmlDocument`) | MIT (D. C. Wilson & contributors; Express is an OpenJS project) | Byte-exact finalhandler output for `GET /` |
+| `fastapi/` | FastAPI default 404 body `{"detail":"Not Found"}` | `fastapi/fastapi` `fastapi/exception_handlers.py` (+ Starlette "Not Found") | MIT (Sebastián Ramírez & contributors) | Byte-exact 22-byte JSONResponse body |
+| `nextjs/` | Next.js "404 - This page could not be found" error page | `vercel/next.js` `packages/next/src/pages/_error.tsx` | MIT (Vercel); "Next.js" trademarked | Byte-exact component source (page is React-rendered) |
+| `phoenix/` | Phoenix "Peace of mind from prototype to production" home page | `phoenixframework/phoenix` (v1.7.14) `installer/templates/phx_web/controllers/page_html/home.html.heex` | MIT (Chris McCord & contributors) | Byte-exact HEEx template |
 
 ## First-party pages — © Michal Ferber (covered by this repo's [`LICENSE`](LICENSE))
 
@@ -81,11 +85,9 @@ IIS 1.0–3.0 default pages are **not recoverable** and are documented, not ship
 | `ari-integration.com/` | The maintainer's own domain-closure notice ("Ari Integration Has Closed", effective 2025-01-31) | `index.html`, `header.png` | Original work. Loads Bootstrap 5 from the jsDelivr CDN (MIT) — not redistributed here |
 | `site-maintenance/` | Generic "down for maintenance" placeholder | `index.html`, `maintenance-msg.jpg` | Author-supplied. If `maintenance-msg.jpg` derives from a third-party template, attribute accordingly |
 
-## Decoy and seizure-notice assets — see the caveat in [`NOTICE.md`](NOTICE.md)
+## Decoy and seizure-notice assets
 
-A related external decoy project, [`fake-iis`](https://github.com/aayusharyan/fake-iis), is
-linked under **Related projects** in the [README](README.md) rather than vendored here.
-
-| Path | What it is | Origin | License / rights | Fidelity |
-|------|------------|--------|------------------|----------|
-| `domain-seized.webp` | "THIS WEBSITE HAS BEEN SEIZED" banner (1384×783) citing 18 U.S.C. § 2323 and the U.S. District Court for the N.D. of Georgia; reproduces the **DOJ** seal, the **FBI** seal, and a Dutch **FIOD** logo | **Unknown / unverified** — the maintainer cannot establish its origin | Reproduces U.S. Government seals; use is restricted by statute regardless of copyright (18 U.S.C. §§ 701/709/912 — see `NOTICE.md`). Not affiliated with or endorsed by any agency | As supplied |
+None are vendored here. "This domain has been seized" banners and other law-enforcement
+decoys are deliberately excluded (see the caveat in [`NOTICE.md`](NOTICE.md)); a related
+external decoy project, [`fake-iis`](https://github.com/aayusharyan/fake-iis), is linked
+under **Related projects** in the [README](README.md) rather than included.

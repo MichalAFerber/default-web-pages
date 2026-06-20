@@ -57,6 +57,7 @@ licensed:
 - **The Cloud Native Computing Foundation** — the "Envoy" name (`envoy/`).
 - **Kong Inc.** — the "Kong" name (`kong/`).
 - **LiteSpeed Technologies Inc.** — "OpenLiteSpeed" / "LiteSpeed" and their logos (`openlitespeed/`).
+- **Vercel, Inc.** — the "Next.js" name (`nextjs/`).
 
 These marks appear only as part of faithfully reproducing the original pages. Their
 inclusion is **nominative/archival use and does not imply any affiliation with,
@@ -65,24 +66,18 @@ use those marks.
 
 ## Government seals, law-enforcement, and decoy pages
 
-This collection includes a **decoy / impersonation** asset of the kind used in honeypot,
-sinkhole, and security-research contexts:
-
-- `domain-seized.webp` — a "THIS WEBSITE HAS BEEN SEIZED" banner that reproduces the
-  **U.S. Department of Justice** and **Federal Bureau of Investigation** seals and a Dutch
-  **FIOD** (Fiscale Inlichtingen- en Opsporingsdienst) logo.
-
-A related external decoy server, [`fake-iis`](https://github.com/aayusharyan/fake-iis), is
-**linked** under Related projects in the README rather than vendored here.
+This collection deliberately does **not** vendor "this domain has been seized" banners,
+law-enforcement decoys, or any asset that reproduces a government seal or insignia. A
+related external decoy server, [`fake-iis`](https://github.com/aayusharyan/fake-iis), is
+**linked** under Related projects in the README rather than included here.
 
 Government seals and insignia carry restrictions that are **independent of copyright**. In
 the United States, use of the FBI's name, initials, and seal (18 U.S.C. § 709), of official
 seals and insignia generally (18 U.S.C. § 701), and impersonation of a federal officer or
 agency (18 U.S.C. § 912) are restricted by statute; other jurisdictions have equivalents.
-These assets are included **only** for archival, reference, and defensive-research purposes,
-to document what such pages look like. **They must not be used to impersonate law
-enforcement, to deceive, or in any way that implies official authorization.** Nothing in
-this repository is affiliated with, sponsored by, or endorsed by any government agency.
+Such material is excluded to keep this archive clear of anything that could be used to
+impersonate law enforcement or to deceive. Nothing in this repository is affiliated with,
+sponsored by, or endorsed by any government agency.
 
 ## Reconstructions
 
