@@ -2,19 +2,17 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; height: 100%; }
 body.card { display: flex; align-items: center; justify-content: center; padding: 32px;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-body.body { background: #0b1020; }
-body.source { background: #12131a; }
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: #1f2225; }
 .frame { width: min(900px, 100%); max-height: 100%; border-radius: 12px; overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, .12); box-shadow: 0 20px 60px rgba(0, 0, 0, .45);
+  border: 1px solid rgba(255, 255, 255, .10); box-shadow: 0 20px 60px rgba(0, 0, 0, .45);
   display: flex; flex-direction: column; }
 .bar { display: flex; align-items: center; gap: 8px; padding: 10px 14px;
-  background: #1b1f2a; border-bottom: 1px solid rgba(255, 255, 255, .08); }
-.dot { width: 11px; height: 11px; border-radius: 50%; background: #3a4150; }
+  background: #2a2d31; border-bottom: 1px solid rgba(255, 255, 255, .07); }
+.dot { width: 11px; height: 11px; border-radius: 50%; background: #3a4046; }
 .bar .dot:nth-child(1) { background: #ff5f56; } .bar .dot:nth-child(2) { background: #ffbd2e; }
 .bar .dot:nth-child(3) { background: #27c93f; }
-.fn { margin-left: 8px; color: #9aa4b2; font-size: 13px; }
+.fn { margin-left: 8px; color: #979ca2; font-size: 13px; }
 pre { margin: 0; padding: 18px 20px; overflow: auto; font-size: 13.5px; line-height: 1.6;
-  white-space: pre-wrap; word-break: break-word; }
-.resp { background: #0b1020; color: #cde3ff; }
-.code { background: #12131a; color: #e6edf3; }
+  white-space: pre-wrap; word-break: break-word; background: #202327; }
+.resp { color: #cdd2d8; }
+.code { color: #c8ccd1; }
