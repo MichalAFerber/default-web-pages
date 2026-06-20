@@ -34,7 +34,8 @@ brand marks that remain trademarks of their owners no matter how the surrounding
 licensed:
 
 - **Microsoft Corporation** — the Windows flag, the IIS marks, the Microsoft / Microsoft
-  Web wordmarks, and the IIS Help text (`iis-*`, `iis-assets/`, `COLEGAL.HTM`).
+  Web wordmarks, and the IIS Help text (`iis-*`, including the IIS Help `COLEGAL.HTM`, and
+  `iis-assets/`).
 - **Canonical Ltd.** — the Ubuntu logo and name (`apache-ubuntu/`).
 - **Rocky Enterprise Software Foundation** — the Rocky Linux marks (`apache-rocky/`).
 - **Red Hat, Inc.** — Red Hat Enterprise Linux naming (`nginx-rhel/`).
