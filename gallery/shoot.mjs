@@ -31,6 +31,23 @@ for (const name of names) {
   }
   await page.close();
 }
+
+// OG cover image: screenshot the populated index (entry thumbnails now exist).
+try {
+  const cover = await ctx.newPage();
+  await cover.setViewportSize({ width: 1200, height: 630 });
+  await cover.goto(pathToFileURL(path.join(DIST, 'index.html')).href, { waitUntil: 'load', timeout: 20000 });
+  await cover.waitForTimeout(700);
+  await cover.screenshot({
+    path: path.join(DIST, 'shots', '_cover.png'),
+    clip: { x: 0, y: 0, width: 1200, height: 630 },
+  });
+  await cover.close();
+  console.log('cover shot');
+} catch (e) {
+  console.error(`cover failed: ${e.message}`);
+}
+
 await browser.close();
 console.log(`Shot ${ok}/${names.length} entries`);
 if (ok === 0) process.exit(1);
