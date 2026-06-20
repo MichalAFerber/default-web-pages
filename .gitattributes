@@ -4,3 +4,12 @@
 # Raw HTTP response files (e.g. HAProxy errorfiles) are served verbatim and must
 # keep their CRLF line endings, so exempt them from normalization.
 *.http -text
+
+# IIS / Windows originals shipped with CRLF. Store them verbatim (CRLF in the blob) so
+# the archived bytes match what IIS served, including the documented Content-Lengths
+# (e.g. 689 for IIS 7.x, 703 for IIS 10 Server). In this repo .htm/.asp are IIS-only.
+*.htm -text
+*.HTM -text
+*.asp -text
+*.ASP -text
+iis-5.x_win2000-xp/IISHELP/COMMON/COUA.CSS -text
