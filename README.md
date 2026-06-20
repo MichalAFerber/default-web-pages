@@ -1,0 +1,74 @@
+# Web server default pages - a recreation archive
+
+The page a web server shows on a fresh install, before anyone configures it - collected
+and made faithful across the two big lineages. **IIS from 1995 to today, and the major
+Linux servers.** Each half has its own detailed README; this is the index.
+
+```
+webserver-default-pages/
+├── iis/      Microsoft IIS - Windows NT 3.51 (1995) through Windows Server 2022
+│   ├── README.md                     (the modern era, 6.0 -> 10)
+│   └── IIS-4.0-and-earlier-FINDINGS.md (4.0 and the lost 1.0-3.0 pages)
+└── linux/    nginx, Apache, Caddy
+    └── README.md
+```
+
+## iis/ - the Microsoft lineage
+
+| Folder | IIS | Windows | The page |
+|--------|-----|---------|----------|
+| *(documented only)*           | 1.0-3.0 | NT 3.51 / NT 4.0 / NT4 SP3 | lost - see FINDINGS |
+| `iis-4.0_nt4-optionpack`      | 4.0  | NT 4.0 Option Pack          | "Welcome to IIS 4.0!" 3-tab site |
+| `iis-5.x_win2000-xp`          | 5.0/5.1 | Win 2000 / XP Pro         | `iisstart.asp` + `localstart.asp` ASP pair |
+| `iis-6.0_server2003`          | 6.0  | Server 2003                 | "Under Construction" *(reconstructed)* |
+| `iis-7.0_vista-server2008`    | 7.0  | Vista / Server 2008         | blue "IIS7" splash |
+| `iis-7.5_win7-server2008r2`   | 7.5  | Win 7 / Server 2008 R2      | identical to 7.0 |
+| `iis-8.0_win8-server2012`     | 8.0  | Win 8 / Server 2012         | microsoft.com/web composited |
+| `iis-8.5_win81-server2012r2`  | 8.5  | Win 8.1 / Server 2012 R2    | single image on #0072C6 |
+| `iis-10_win10-client`         | 10   | Windows 10                  | "IIS Windows" |
+| `iis-10_server2016plus`       | 10   | Server 2016 / 2019 / 2022   | "IIS Windows Server" |
+
+There is **no IIS 9** - Microsoft jumped 8.5 to 10 to line up with Windows 10.
+
+## linux/ - nginx, Apache, Caddy
+
+| Folder | Server | The page |
+|--------|--------|----------|
+| `nginx`          | nginx (upstream / Debian) | "Welcome to nginx!" |
+| `nginx-rhel`     | nginx (RHEL / Fedora pkg) | "Welcome to nginx on Red Hat Enterprise Linux!" test page |
+| `apache-itworks` | Apache HTTP Server (upstream) | "It works!" (a 45-byte one-liner) |
+| `apache-ubuntu`  | Apache (Debian / Ubuntu pkg) | "Apache2 Default Page" |
+| `apache-rocky`   | Apache (Rocky / EL9 pkg) | "HTTP Server Test Page ... Rocky Linux" |
+| `caddy`          | Caddy v2 | "Caddy works!" / the slanted "Congratulations!" page |
+
+On Linux the "default page" is **distro packaging**, not the upstream project, which is
+why nginx and Apache each appear twice (plain upstream vs. the RHEL-family test page).
+
+## Provenance
+
+Almost everything here is **byte-exact**, pulled from a genuine source - a live server
+still serving its stock default, a git/dist-git blob, a real distro package, or files
+you supplied (the Ubuntu page, the XP `localstart` mirror). Two honest exceptions, both
+labeled in place:
+
+- **IIS 6.0** - visible "Under Construction" text is verified; the surrounding markup is
+  a period-accurate reconstruction (the original bytes weren't recoverable).
+- **IIS 1.0-3.0** - documented, not recreated. No trustworthy copy of those pages
+  survives; `IIS-4.0-and-earlier-FINDINGS.md` explains what they were and why 4.0 is the
+  oldest recoverable one.
+
+The IIS 5.x `localstart.asp` deserves a note: it's genuine, but *assembled* from two
+real captures - the ADSI/ASP header from a source-leaking box, and the body/CSS/JS from
+an HTTrack mirror of a live XP machine - with the resolved template expressions
+re-inserted. Details in `iis/iis-5.x_win2000-xp/README.md`.
+
+## Conventions
+
+- **Line endings:** IIS files are **CRLF** (Windows originals); Linux files are **LF**.
+  Byte counts on the IIS HTML match the live `Content-Length`s (e.g. 689 for 7.x, 703
+  for 10 Server).
+- **Images** are included where a page needs them (the XP GIFs, `ubuntu-logo.png`, the
+  nginx/Rocky `poweredby` badges). A few still-external ones are noted per-folder.
+- **Empty dirs:** there are none. If you ever `mkdir {a,b,c}` in a shell that doesn't do
+  brace expansion (POSIX `sh`/dash) you'll create one literal `{a,b,c}` folder; clean any
+  up with `find . -depth -type d -name '{*}' -empty -delete`.
