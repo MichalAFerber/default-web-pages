@@ -10,7 +10,7 @@ const OUT = path.join(ROOT, 'dist');
 const BASE = 'https://michalaferber.github.io/default-web-pages';
 const REPO = 'https://github.com/MichalAFerber/default-web-pages';
 // Plausible Analytics (self-hosted). data-domain must match the site name in the dashboard.
-const PLAUSIBLE = '<script defer data-domain="michalaferber.github.io" src="https://plausible.thomsonblack.us/js/script.js"></script>';
+const PLAUSIBLE = '<script defer data-domain="michalaferber.github.io" src="https://plausible.thompsonblack.us/js/script.js"></script>';
 
 const SKIP = new Set(['.git', '.github', 'gallery', 'dist', 'node_modules', 'iis-assets']);
 const MISC = new Set(['ari-integration.com', 'site-maintenance']);
