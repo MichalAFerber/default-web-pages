@@ -37,3 +37,11 @@ Actions**. The workflow handles the rest.
 Source/template previews are syntax-highlighted with [highlight.js](https://highlightjs.org/)
 (v11.9.0, BSD-3-Clause) using its `github-dark` theme, vendored under `assets/vendor/` so the
 screenshots stay hermetic (no CDN at render time).
+
+## Analytics
+
+The gallery pages (the index and each entry's detail page — not the iframed previews) load a
+self-hosted [Plausible](https://plausible.io/) script from `plausible.thompsonblack.us`. It's
+cookieless, so no consent banner is required. The tracked site is set via the `data-domain`
+attribute in `build.mjs`, which must match the site name configured in the Plausible
+dashboard.
