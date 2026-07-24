@@ -195,7 +195,7 @@ function build() {
     });
     fs.writeFileSync(path.join(OUT, 'entry', `${e.name}.html`), `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>${esc(e.title)} · default-web-pages</title>${og}${PLAUSIBLE}<link rel="stylesheet" href="../styles.css"></head>
+<title>${esc(e.title)} · default-web-pages</title>${og}${PLAUSIBLE}<link rel="icon" type="image/svg+xml" href="../favicon.svg"><link rel="stylesheet" href="../styles.css"></head>
 <body><header class="top"><a class="home" href="../index.html">← all pages</a></header>
 <main class="detail"><div class="meta"><span class="badge ${e.category}">${e.category}</span>
 <span class="badge type">${TYPE_LABEL[e.type]}</span>
@@ -237,7 +237,7 @@ onerror="this.style.display='none';this.parentNode.classList.add('noshot');this.
   fs.writeFileSync(path.join(OUT, 'index.html'), `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>default-web-pages · gallery</title><meta name="description" content="A browsable gallery of the default pages shipped by web servers, proxies, gateways and frameworks.">
-${idxOg}${PLAUSIBLE}<link rel="stylesheet" href="styles.css"></head>
+${idxOg}${PLAUSIBLE}<link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="stylesheet" href="styles.css"></head>
 <body><header class="hero"><h1>default-web-pages</h1>
 <p>The pages you see before you've configured anything — the defaults shipped by web servers, proxies, gateways and frameworks, captured byte-for-byte. ${entries.length} entries.</p>
 <p class="links"><a href="${REPO}">repo</a> · <a href="${REPO}/blob/main/SOURCES.md">sources</a> · <a href="${REPO}/blob/main/NOTICE.md">notice</a></p>
@@ -264,6 +264,7 @@ q.addEventListener('input',flt);
   fs.copyFileSync(path.join(ROOT, 'gallery', 'assets', 'styles.css'), path.join(OUT, 'styles.css'));
   fs.copyFileSync(path.join(ROOT, 'gallery', 'assets', 'card.css'), path.join(OUT, 'card.css'));
   fs.cpSync(path.join(ROOT, 'gallery', 'assets', 'vendor'), path.join(OUT, 'vendor'), { recursive: true });
+  fs.copyFileSync(path.join(ROOT, 'gallery', 'assets', 'favicon.svg'), path.join(OUT, 'favicon.svg'));
   fs.writeFileSync(path.join(OUT, '.nojekyll'), '');
   fs.writeFileSync(path.join(OUT, 'shots.json'),
     JSON.stringify(entries.map((e) => e.name), null, 0));
