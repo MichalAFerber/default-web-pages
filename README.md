@@ -133,6 +133,19 @@ Other repositories that recreate or serve default / decoy web-server pages:
   site: spoofed `Server` / `X-Powered-By` headers and IIS-styled 403 / 404 / 500 pages.
   MIT-licensed; prebuilt image at `ghcr.io/aayusharyan/fake-iis`.
 
+## Standards & deviations
+
+Built to the **TGWAB Dev Standards** as a **Class C micro-project** — a public
+reference gallery on GitHub Pages, MIT, no custom domain.
+
+- **§4: one Actions workflow builds this site, not the platform's own build.**
+  The gallery is generated, not authored: `gallery/build.mjs` assembles the
+  index and `gallery/shoot.mjs` screenshots every entry with Playwright and
+  headless Chromium. GitHub Pages' own build runs neither, so the platform build
+  would publish an index with no screenshots behind it. There is exactly one
+  workflow (`pages.yml`) and no second deploy path, which is what §4 binds; the
+  platform-build preference is what is deviated from.
+
 ## License
 
 The collected pages here each remain **© their respective owners** and are included for
