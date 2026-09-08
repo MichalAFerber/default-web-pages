@@ -1,0 +1,24 @@
+# TGWAB dependency updates—DEV-STANDARDS §15.
+#
+# Place at:  .github/dependabot.yml
+#
+# Grouping caps a normal week at ~3 PRs instead of one per package—ungrouped
+# Dependabot is how automated updates get muted and then ignored.
+
+version: 2
+
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "06:00"
+      timezone: America/New_York
+    open-pull-requests-limit: 2
+    labels: [dependencies]
+    commit-message:
+      prefix: "chore(actions)"
+    groups:
+      actions:
+        patterns: ["*"]
